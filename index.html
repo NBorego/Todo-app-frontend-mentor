@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" class="light-theme">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="styles/index.css" />
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="todo-header">
+    <h1 class="todo-header__title">TODO</h1>
+
+    <button class="todo-header__btn">
+      <img src="images/icon-moon.svg" alt="Icone para mudar para o tema" class="todo-header__btn__icon" />
+    </button>
+  </header>
+
+  <main class="todo-main">
+    <form class="todo-main__form">
+      <input type="text" class="todo-main__form__input" />
+    </form>
+
+    <section class="todo-main__tasks"></section>
+  </main>
+
+  <div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+    <a href="https://github.com/NBorego" target="_blank" referrerpolicy="no-referrer">Nicolas Borego</a>.
+  </div>
+
+  <script src="src/scripts.js"></script>
+</body>
+
+</html>

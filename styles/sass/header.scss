@@ -1,0 +1,31 @@
+.todo-header {
+  display: flex;
+  align-items: center;
+  padding-block: 3.3rem 9rem;
+  justify-content: space-around;
+  gap: 12rem;
+  width: 100vw;
+  background: violet var(--bg-mobile) no-repeat;
+  background-size: cover;
+
+  .todo-header__title {
+    letter-spacing: 0.8rem;
+    color: var(--title-text-color);
+  }
+
+  .todo-header__btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(120%);
+    }
+
+    .todo-header__icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
