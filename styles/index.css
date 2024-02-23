@@ -1,15 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap");
 .todo-header {
-  display: flex;
   align-items: center;
-  padding-block: 3.3rem 9rem;
-  justify-content: space-around;
-  gap: 12rem;
-  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 3.5rem 2.5rem;
+  width: min(80vw, 38rem);
+}
+.todo-header .todo-header__background {
   background: violet var(--bg-mobile) no-repeat;
   background-size: cover;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: min(45vw, 20rem);
+  z-index: -1;
+}
+@media (min-width: 700px) {
+  .todo-header .todo-header__background {
+    background-image: var(--bg-desktop);
+  }
 }
 .todo-header .todo-header__title {
+  font-size: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
   letter-spacing: 0.8rem;
   color: var(--title-text-color);
 }
@@ -27,6 +40,10 @@
   height: 1.25rem;
 }
 
+.todo-main .todo-main__form .todo-main__form__input {
+  width: min(80vw, 38rem);
+}
+
 :root {
   --background-color: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
   --bright-blue: hsl(220, 98%, 61%);
@@ -35,6 +52,8 @@
   --text-font: "Josefin Sans", sans-serif;
   --bg-mobile: url("../images/bg-mobile-light.jpg");
   --bg-desktop: url("../images/bg-desktop-light.jpg");
+  --mobile-layout: 375px;
+  --desktop-layout: 1440px;
 }
 
 .dark-theme {
@@ -46,11 +65,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
   font-family: var(--text-font);
 }
 
 body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--background-color);
 }
 
